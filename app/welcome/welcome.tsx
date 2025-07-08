@@ -40,15 +40,13 @@ export function Welcome({ message }: { message: string }) {
 								</li>
 							))}
 							<li className='self-stretch p-3 leading-normal'>{message}</li>
+							<Link to='/about'>About</Link>
+							<li>
+								<Link to='/contact'>Contact</Link>
+							</li>
 						</ul>
 					</nav>
 				</div>
-			</div>
-			<div>
-				<Link to='/about'>About</Link>
-			</div>
-			<div>
-				<Link to='/contact'>Contact</Link>
 			</div>
 		</main>
 	);
