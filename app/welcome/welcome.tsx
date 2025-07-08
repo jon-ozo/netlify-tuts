@@ -44,6 +44,9 @@ export function Welcome({ message }: { message: string }) {
 							<li>
 								<Link to='/contact'>Contact</Link>
 							</li>
+							<li>
+								<Link to='/services'>Service</Link>
+							</li>
 						</ul>
 					</nav>
 				</div>
