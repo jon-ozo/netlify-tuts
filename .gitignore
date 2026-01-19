@@ -1,9 +1,9 @@
 .DS_Store
 /node_modules/
+/app/assets/mountain_with_roads.mp4
+/app/assets/expertise-video.mp4
+/app/assets/about-video.mp4
 
 # React Router
 /.react-router/
 /build/
-
-# Netlify
-.netlify
