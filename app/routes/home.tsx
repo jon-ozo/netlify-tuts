@@ -46,7 +46,7 @@ export default function Home() {
 				<menu className='menu'>
 					<li>
 						<Link
-							to='deal-orientation'
+							to='deal-origination'
 							className='menu-list'
 						>
 							<p className='slide-up'>
@@ -64,7 +64,7 @@ export default function Home() {
 									viewBox: '0 0 24 24',
 								}}
 							>
-								<path d='M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z' />
+								<path d='M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z' />
 							</Svg>
 						</Link>
 					</li>
@@ -74,7 +74,7 @@ export default function Home() {
 							className='menu-list'
 						>
 							<p className='slide-up'>
-								<span className='paragraph-title'>Advisor</span>
+								<span className='paragraph-title'>Advisory</span>
 								<span className='paragraph-sub-title'>
 									Corporate Entities, Portfolio Companies, Start-ups
 								</span>
@@ -87,11 +87,11 @@ export default function Home() {
 									viewBox: '0 0 24 24',
 								}}
 							>
-								<path d='M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z' />
+								<path d='M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z' />
 							</Svg>
 						</Link>
 					</li>
-					<li>
+					{/* <li>
 						<Link
 							to='https://insights.advianpartners.com/insights/'
 							className='menu-list'
@@ -114,7 +114,7 @@ export default function Home() {
 								<path d='M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z' />
 							</Svg>
 						</Link>
-					</li>
+					</li> */}
 				</menu>
 			</div>
 		</article>

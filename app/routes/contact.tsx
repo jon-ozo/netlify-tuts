@@ -1,11 +1,13 @@
 import emailjs from '@emailjs/browser';
-import ReCAPTCHA from 'react-google-recaptcha';
+// import ReCAPTCHA from 'react-google-recaptcha';
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router';
 
 export default function Contact() {
 	const [successStatus, setSuccessStatus] = useState('');
-	const [capValue, setCapValue] = useState<string | null>(null);
+	// const [capValue, setCapValue] = useState<string | null>(null);
 	const form = useRef<HTMLFormElement | null>(null);
+	const ref = useRef<HTMLAnchorElement>(null);
 
 	useEffect(() => {
 		setTimeout(() => {
@@ -37,14 +39,30 @@ export default function Contact() {
 			);
 	};
 
+	function handleEmailHref() {
+		let href = ref.current?.getAttribute('href');
+		href = href + 'contact@advianpartners.com';
+	}
+
 	return (
 		<article className='contact-page-container'>
-			<header className='center-heading margin-top flex-display-column row-gap-s'>
-				<h2 className='slide-up margin-top'>Talk to Us</h2>
-				<p className='slide-up align-text-left'>
+			<header className='container margin-top flex-display-column row-gap-s'>
+				<h2 className='center-align-title slide-up margin-top'>Talk to Us</h2>
+				<p className='center-sub-text slide-up align-text-left'>
 					For both our Deal Origination and advisory services, we deliver
 					bespoke and tailored solutions to our clients. Complete this brief
 					form to discuss engagement options.
+				</p>
+				<p className='center-sub-text slide-up align-text-left'>
+					Email:{' '}
+					<Link
+						ref={ref}
+						onClick={handleEmailHref}
+						to='mailto:'
+						className='email'
+					>
+						contact@<b className='hide-fake-text'>faketext</b>advianpartners.com
+					</Link>
 				</p>
 			</header>
 			<form
@@ -153,6 +171,12 @@ export default function Contact() {
 					<div className='error'>Failed to send Email</div>
 				)}
 			</form>
+
+			<address className='center-sub-text slide-up'>
+				<h3>Address:</h3>
+				<b>60, rue Francois 1er,</b>
+				<br /> <b>75008, Paris,</b> <br /> <b>France.</b>
+			</address>
 		</article>
 	);
 }
