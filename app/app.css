@@ -429,6 +429,8 @@ address {
 .home .h1-sub-text {
   color: var(--sandy_brown);
   margin-inline: auto;
+  margin-top: .5em;
+  font-size: .9rem;
 }
 
 .home figure {
