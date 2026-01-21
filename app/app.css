@@ -79,8 +79,9 @@ article {
 }
 
 footer {
-  background: var(--pickle_blue);
+  background: linear-gradient(to top, var(--mirage), var(--pickle_blue));
   color: var(--linen);
+  isolation: isolate;
 }
 
 h1 {
@@ -351,6 +352,31 @@ address {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.home::after,
+.home::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  filter: blur(90px);
+  background: #38577e63;
+}
+
+.home::before {
+  top: -10em;
+  left: -10em;
+}
+
+.home::after {
+  right: 0;
+  bottom: -10em;
 }
 
 .center-align-title {
@@ -465,7 +491,24 @@ address {
   width: 100%;
   margin-inline: 0;
   background: var(--linen);
+  position: relative;
+  isolation: isolate;
+  perspective: 200px;
+  overflow: hidden;
 }
+
+/* .ordered-list-wrapper::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  transform: rotateZ(-30deg);
+  background: #faf7ed;
+  filter: blur(50px);
+} */
 
 .ordered-list {
   counter-reset: item 0;
@@ -473,23 +516,19 @@ address {
 
 .ordered-list li {
   position: relative;
-  padding-left: 4.5em;
+  padding-left: 3em;
 }
 
 .ordered-list li::before {
-  display: grid;
-  place-content: center;
-  content: counter(item) "";
-  counter-increment: item;
+  content: '';
   position: absolute;
-  top: 0;
+  top: .3em;
   left: 0;
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  border: .1em solid var(--pickle_blue);
-  padding: var(--gap);
-  font-size: .9rem;
+  width: 2em;
+  height: 2em;
+  background: linear-gradient(to bottom, var(--linen), var(--silver));
+  border-radius: var(--border_radius);
+  /* padding: var(--gap); */
 }
 
 .ordered-list p {
@@ -553,6 +592,33 @@ address {
 
 
 /* footer cta section */
+.footer {
+  position: relative;
+}
+
+/* .footer::before, */
+.footer::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 30%;
+  border-radius: 50%;
+  filter: blur(90px);
+  background: #38577e63;
+  translate: 50% 0;
+}
+
+/* .footer::before {
+  top: 0;
+  left: 0;
+} */
+
+.footer::after {
+  top: 5%;
+  right: 50%;
+}
+
 .footer h2 {
   color: var(--sandy_brown);
   width: unset;
