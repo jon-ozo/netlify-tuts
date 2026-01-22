@@ -11,7 +11,7 @@ export default function FooterCta() {
 				<li className='center-sub-text slide-up'>
 					Limited Availability Per Quarter
 				</li>
-				<li className='place-center'>
+				<li className='center-button'>
 					<Link
 						to='/contact'
 						className='sec-btn margin-top slide-up'

@@ -796,9 +796,11 @@ address h3 {
   text-align: center;
 }
 
-.place-center {
-  display: grid;
-  place-content: center;
+.center-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .grid-display {
