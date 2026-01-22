@@ -1222,6 +1222,7 @@ svg.contact-links:focus-visible {
 
   h1 {
     font-size: clamp(1.5em, 1vw + 3em, 5em);
+    width: min(100%, 70%);
   }
 
   h2 {
