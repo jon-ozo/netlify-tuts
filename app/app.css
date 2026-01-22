@@ -901,6 +901,7 @@ svg.contact-links:focus-visible {
   padding-block-end: .5em;
   color: var(--linen);
   transition: var(--transition);
+  perspective: 200px;
 
   @media (min-width: 60em) {
     width: fit-content;
@@ -909,7 +910,7 @@ svg.contact-links:focus-visible {
 
 .pri-btn svg {
   width: 18px;
-  rotate: 45deg 0;
+  transform: rotateZ(45deg);
 }
 
 .pri-btn:hover,
