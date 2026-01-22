@@ -2,6 +2,7 @@ import emailjs from '@emailjs/browser';
 // import ReCAPTCHA from 'react-google-recaptcha';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router';
+import contactImg from '~/assets/img/contact-logo.png';
 
 export default function Contact() {
 	const [successStatus, setSuccessStatus] = useState('');
@@ -47,8 +48,10 @@ export default function Contact() {
 	return (
 		<article className='contact-page-container'>
 			<header className='container margin-top flex-display-column row-gap-s'>
-				<h2 className='center-align-title slide-up margin-top'>Talk to Us</h2>
-				<p className='center-sub-text slide-up align-text-left'>
+				<h2 className='container center-align-title slide-up margin-top'>
+					Talk to Us
+				</h2>
+				<p className='center-sub-text slide-up'>
 					For both our Deal Origination and advisory services, we deliver
 					bespoke and tailored solutions to our clients. Complete this brief
 					form to discuss engagement options.
@@ -111,18 +114,13 @@ export default function Contact() {
 						required
 					>
 						<option
-							value=''
+							value='Deal origination'
 							disabled
 							selected
 						>
 							What Service Peaked Your Interest?
 						</option>
-						{/* <option value='Financial Advisory'>Financial Advisory</option>
-						<option value='Mergers & Acquisitions'>
-							Mergers & Acquisitions
-						</option>
-						<option value='Capital Raising'>Capital Raising</option>
-						<option value='Consulting Services'>Consulting Services</option> */}
+						<option value='Advisory'>Advisory Services</option>
 					</select>
 				</div>
 
@@ -144,7 +142,7 @@ export default function Contact() {
 					/>
 				</div> */}
 
-				<div>
+				<div className='center-button'>
 					<button
 						type='submit'
 						className='submit'
@@ -162,7 +160,14 @@ export default function Contact() {
 			</form>
 
 			<address className='center-sub-text slide-up'>
-				<h3>Address:</h3>
+				<figure className='container contact-logo'>
+					<img
+						src={contactImg}
+						alt='business logo.'
+						width={200}
+						height={40}
+					/>
+				</figure>
 				60, rue Francois 1er,
 				<br />
 				75008, Paris, <br /> France.

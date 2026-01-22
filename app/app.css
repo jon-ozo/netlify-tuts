@@ -100,7 +100,8 @@ h2 {
   font-size: clamp(1.2em, 1vw + 1.4em, 3.5em);
   line-height: 1.1;
   font-weight: 100;
-  width: min(calc(100% - var(--gap)), 30ch);
+  /* width: min(calc(100% - var(--gap)), 30ch);
+  margin-inline: auto; */
   font-family: var(--eb_garamond);
 }
 
@@ -303,7 +304,7 @@ svg.contact-links:focus-visible {
 }
 
 .cancel-btn>svg {
-  width: 10%;
+  width: 5%;
   fill: var(--linen);
   cursor: pointer;
 }
@@ -546,7 +547,7 @@ svg.contact-links:focus-visible {
   position: relative;
   padding: 2em;
   border-radius: var(--border_radius);
-  background: linear-gradient(to bottom, var(--silver), var(--linen));
+  background: linear-gradient(to bottom, #c9c2b23f, var(--linen));
 }
 
 /* .ordered-list li::before {
@@ -587,10 +588,6 @@ svg.contact-links:focus-visible {
   margin-top: 5em;
   padding-block: 1em;
   gap: 1em;
-}
-
-.marketing-stats>* {
-  justify-self: center;
 }
 
 .big-text {
@@ -722,13 +719,27 @@ svg.contact-links:focus-visible {
   color: var(--linen_blur);
 }
 
+.footer-lastchild a:not(.web-link) {
+  text-decoration: underline;
+}
+
 .footer-lastchild a {
   color: var(--linen_blur);
-  text-decoration: underline;
 }
 
 .footer-address {
   color: var(--linen_blur)
+}
+
+.contact-logo {
+  display: grid;
+  place-content: center;
+  margin-bottom: 1em;
+}
+
+.contact-logo img {
+  aspect-ratio: 16 / 2;
+  object-fit: contain;
 }
 
 .policies {
@@ -808,6 +819,7 @@ svg.contact-links:focus-visible {
 .center-sub-text {
   width: min(calc(100% - var(--gap)), 40em);
   margin-inline: auto;
+  margin-top: 2em;
   text-align: center;
 }
 
@@ -1128,14 +1140,10 @@ svg.contact-links:focus-visible {
   display: none;
 }
 
-.email {
-  text-decoration: underline;
-  color: var(--mirage);
-}
-
+.email,
 .web-link {
-  text-decoration: underline;
-  color: var(--linen);
+  text-decoration: none;
+  color: var(--mirage);
 }
 
 .font-xs {
@@ -1238,6 +1246,10 @@ svg.contact-links:focus-visible {
 
   h2 {
     font-size: clamp(1.2em, 1vw + 2em, 4.1em);
+  }
+
+  .marketing-stats>* {
+    justify-self: center;
   }
 }
 
