@@ -15,10 +15,11 @@ export default function SingleCol({
 				<header>
 					{children}
 					<p className='header-sub-text slide-up'>{paragraph}</p>
-					<ul className='marketing-stats'>
+					<ul className='grid-display marketing-stats'>
 						{marketingLists.map((list) => (
 							<li key={list.bigText}>
-								<span className='big-text'>{list.bigText}</span>{' '}
+								<span className='big-text'>{list.bigText}</span>
+								<br />
 								<span className='small-text'>{list.smallText}</span>
 							</li>
 						))}

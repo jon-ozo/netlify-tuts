@@ -116,7 +116,7 @@ export const dealOriginationMarketing = [
 	{ bigText: '€1.2 billion', smallText: 'Off-Market Deal Pipeline' },
 	{
 		bigText: '70 Markets',
-		smallText: 'Markets Covered in the EMEA and NAM Regions',
+		smallText: 'Covered in the EMEA and NAM Regions',
 	},
 	{
 		bigText: '100% Aligned',

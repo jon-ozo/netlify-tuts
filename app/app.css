@@ -240,13 +240,10 @@ address h3 {
   }
 }
 
-.top-nav-links>li:last-child>a {
-  font-weight: 500;
-}
-
 .top-nav-links a {
   color: var(--linen);
-  font-size: .9em;
+  font-size: .8em;
+  font-weight: 500;
   transition: var(--transition);
 }
 
@@ -300,17 +297,21 @@ svg.contact-links:focus-visible {
   width: 10%;
 }
 
+.cancel-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .cancel-btn>svg {
   width: 10%;
   fill: var(--linen);
-  float: right;
   cursor: pointer;
 }
 
 .mobile-nav {
-  display: grid;
+  /* display: grid;
   grid-row: auto 1fr;
-  gap: var(--gap);
+  gap: var(--gap); */
   padding: var(--padd);
   width: 100%;
   height: 100%;
@@ -324,11 +325,11 @@ svg.contact-links:focus-visible {
 }
 
 .mobile-nav li+li {
-  margin-top: 1.5em;
+  margin-top: 2.5em;
 }
 
 .mobile-nav a {
-  font-size: 1.5em;
+  font-size: .9em;
   color: var(--linen);
   transition: var(--transition);
 }
@@ -403,6 +404,15 @@ svg.contact-links:focus-visible {
   padding-block: 1em;
 }
 
+.menu-list>:first-child {
+  flex-shrink: 2;
+  flex-grow: 2;
+}
+
+.menu-list>:last-child {
+  flex-shrink: 0;
+}
+
 .menu li {
   transition: var(--transition);
   padding-inline: 1em;
@@ -448,7 +458,7 @@ svg.contact-links:focus-visible {
   margin-block-end: 0;
   margin-inline-start: calc((100% - var(--width)) / 2);
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 0;
   z-index: 1;
 }
@@ -478,7 +488,7 @@ svg.contact-links:focus-visible {
   top: 0;
   left: 0;
   inset: 0;
-  background: rgba(28, 38, 50, 0.274);
+  background: rgba(28, 38, 50, 0.534);
 }
 
 .flex-row {
@@ -522,12 +532,24 @@ svg.contact-links:focus-visible {
   counter-reset: item 0;
 }
 
-.ordered-list li {
+/* .ordered-list li {
   position: relative;
   padding-left: 3em;
+} */
+
+.ordered-list li+li {
+  margin-top: 1em;
 }
 
-.ordered-list li::before {
+.ordered-list li {
+  width: fit-content;
+  position: relative;
+  padding: 2em;
+  border-radius: var(--border_radius);
+  background: linear-gradient(to bottom, var(--silver), var(--linen));
+}
+
+/* .ordered-list li::before {
   content: '';
   position: absolute;
   top: .3em;
@@ -536,8 +558,8 @@ svg.contact-links:focus-visible {
   height: 2em;
   background: linear-gradient(to bottom, var(--linen), var(--silver));
   border-radius: var(--border_radius);
-  /* padding: var(--gap); */
-}
+  padding: var(--gap);
+} */
 
 .ordered-list p {
   width: min(calc(100% - var(--gap)), 70ch);
@@ -563,38 +585,23 @@ svg.contact-links:focus-visible {
 .marketing-stats {
   border-block: .1px solid var(--mirage);
   margin-top: 5em;
-}
-
-.marketing-stats li+li {
-  border-block-start: .1px solid var(--mirage);
-}
-
-.marketing-stats li {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  column-gap: 1em;
-  row-gap: .5em;
   padding-block: 1em;
+  gap: 1em;
 }
 
-.marketing-stats li>:first-child {
-  flex-basis: calc(10em - 100%);
-  flex-grow: 1;
-  white-space: nowrap;
-}
-
-.marketing-stats li>:last-child {
-  flex-basis: calc(50em - 100%);
-  flex-grow: 2;
+.marketing-stats>* {
+  justify-self: center;
 }
 
 .big-text {
+  white-space: nowrap;
   font-family: var(--eb_garamond);
   font-size: clamp(1.3rem, 1vw + 1.8rem, 3.5rem);
 }
 
 .small-text {
+  display: inline-block;
+  width: min(100%, 25ch);
   font-size: .9rem;
   padding-bottom: .5em;
 }
@@ -635,18 +642,17 @@ svg.contact-links:focus-visible {
 
 .footer-logo {
   height: 100%;
-  aspect-ratio: 16 / 1;
+  aspect-ratio: 16 / 2;
   object-fit: contain;
-}
-
-.height-forty-two {
-  margin-top: .4em;
-  height: 42px;
-  padding-bottom: .3em
 }
 
 .footer-links-wrapper {
   margin-top: 8em;
+}
+
+.footer-logo-wrapper {
+  margin-block-end: 1em;
+  border-block-end: .1px solid var(--linen_blur);
 }
 
 .footer-links {
@@ -658,7 +664,7 @@ svg.contact-links:focus-visible {
 }
 
 .footer-links-title {
-  font-size: 1.75rem;
+  font-size: .9rem;
   font-weight: 500;
   margin-block-end: 1em;
   border-block-end: .1px solid var(--linen_blur);
@@ -670,21 +676,26 @@ svg.contact-links:focus-visible {
   width: fit-content;
 }
 
-.footer-links a {
+.footer-links a:not(.footer-logo-wrapper a) {
   display: block;
   position: relative;
   transition: var(--transition);
 }
 
-.footer-links a:hover::before {
+.footer-links:nth-child(2) a {
+  color: var(--linen_blur);
+}
+
+.footer-links a:not(.footer-logo-wrapper a):hover::before {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   height: .2em;
   width: 100%;
-  background: var(--linen_blur);
+  background: var(--linen);
   transform: scaleX(0);
+  color: var(--linen);
 
   animation: scale-line var(--transition) linear forwards;
 }

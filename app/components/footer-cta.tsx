@@ -8,9 +8,9 @@ export default function FooterCta() {
 				<li>
 					<h2 className='center-align-title slide-up'>Get in Touch</h2>
 				</li>
-				<li className='center-sub-text slide-up'>
+				{/* <li className='center-sub-text slide-up'>
 					Limited Availability Per Quarter
-				</li>
+				</li> */}
 				<li className='center-button'>
 					<Link
 						to='/contact'
@@ -22,9 +22,9 @@ export default function FooterCta() {
 			</ul>
 			<div className='footer-links-wrapper container grid-display'>
 				<ul className='footer-links'>
-					<li className='footer-links-title height-forty-two'>
+					<li className='footer-logo-wrapper'>
 						<Link to='/'>
-							<figure className='slide-up height-forty-two'>
+							<figure className='slide-up'>
 								<img
 									src={footerLogo}
 									alt='business logo.'
@@ -59,7 +59,7 @@ export default function FooterCta() {
 					</li>
 				</ul>
 				<ul className='footer-links'>
-					<li className='footer-links-title slide-up'>SOCIALS</li>
+					<li className='footer-links-title slide-up'>CONNECT</li>
 					<li className='slide-up'>
 						<Link
 							to=''
