@@ -51,7 +51,7 @@ export default function Nav() {
 							to='/deal-origination'
 							onClick={handleClick}
 						>
-							Deal Origination
+							DEAL ORIGINATION
 						</NavLink>
 					</li>
 					<li>
@@ -59,7 +59,7 @@ export default function Nav() {
 							to='/advisory'
 							onClick={handleClick}
 						>
-							Advisory
+							ADVISORY
 						</NavLink>
 					</li>
 					{/* <li>
@@ -77,7 +77,7 @@ export default function Nav() {
 							to='/contact'
 							onClick={handleClick}
 						>
-							Contact us
+							CONTACT US
 						</NavLink>
 					</li>
 				</ul>
@@ -115,7 +115,7 @@ export default function Nav() {
 									isActive ? 'active-link' : undefined
 								}
 							>
-								Deal Origination
+								DEAL ORIGINATION
 							</NavLink>
 						</li>
 						<li>
@@ -125,7 +125,7 @@ export default function Nav() {
 									isActive ? 'active-link' : undefined
 								}
 							>
-								Advisory
+								ADVISORY
 							</NavLink>
 						</li>
 						{/* <li>
@@ -145,21 +145,13 @@ export default function Nav() {
 									isActive ? 'active-link' : undefined
 								}
 							>
-								Contact us
+								CONTACT US
 							</NavLink>
 						</li>
 					</ul>
-					<svg
-						xmlns='http://www.w3.org/2000/svg'
-						width='24'
-						height='24'
-						viewBox='0 0 24 24'
-						tabIndex={0}
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd" tabIndex={0}
 						className={hamburger}
-						onClick={handleClick}
-					>
-						<path d='M4 22h-4v-4h4v4zm0-12h-4v4h4v-4zm0-8h-4v4h4v-4zm3 0v4h17v-4h-17zm0 12h17v-4h-17v4zm0 8h17v-4h-17v4z' />
-					</svg>
+						onClick={handleClick}><path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" /><path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z"/></svg>
 				</div>
 			</nav>
 		</>

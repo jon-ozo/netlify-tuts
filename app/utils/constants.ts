@@ -57,7 +57,7 @@ export const team = [
 ];
 
 export const dealOriginationHero = {
-	heroParagraph: 'Access proprietary deals beyond the competitive market',
+	heroParagraph: '',
 };
 
 export const dealOriginationLists = [

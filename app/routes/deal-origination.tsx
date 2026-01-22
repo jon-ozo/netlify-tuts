@@ -19,7 +19,7 @@ export default function DealOrientation() {
 				link='/contact'
 			>
 				<h1 className='flip-down'>
-					Access Proprietary <br /> Deals Beyond the <br /> Competitive Market
+					Access Proprietary Deals Beyond the Competitive Market
 				</h1>
 			</HeroSection>
 
