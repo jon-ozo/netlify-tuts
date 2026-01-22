@@ -147,20 +147,15 @@ export default function Nav() {
 						</li>
 					</ul>
 					<svg
-						clipRule='evenodd'
-						fillRule='evenodd'
-						strokeLinejoin='round'
-						strokeMiterlimit='2'
-						viewBox='0 0 24 24'
 						xmlns='http://www.w3.org/2000/svg'
+						width='24'
+						height='24'
+						viewBox='0 0 24 24'
 						tabIndex={0}
 						className='hamburger'
 						onClick={handleClick}
 					>
-						<path
-							d='m13 16.745c0-.414-.336-.75-.75-.75h-9.5c-.414 0-.75.336-.75.75s.336.75.75.75h9.5c.414 0 .75-.336.75-.75zm9-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm-4-5c0-.414-.336-.75-.75-.75h-14.5c-.414 0-.75.336-.75.75s.336.75.75.75h14.5c.414 0 .75-.336.75-.75z'
-							fillRule='nonzero'
-						/>
+						<path d='M4 22h-4v-4h4v4zm0-12h-4v4h4v-4zm0-8h-4v4h4v-4zm3 0v4h17v-4h-17zm0 12h17v-4h-17v4zm0 8h17v-4h-17v4z' />
 					</svg>
 				</div>
 			</nav>

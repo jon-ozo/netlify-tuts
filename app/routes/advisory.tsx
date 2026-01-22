@@ -15,10 +15,12 @@ export default function Advisory() {
 			<HeroSection
 				{...advisoryHero}
 				video={advisoryVideo}
-				linkText='Unlock long-term value'
+				linkText='Connect With Us'
 				link='/contact'
 			>
-				<h1 className='flip-down'>Corporate Advisory</h1>
+				<h1 className='flip-down'>
+					Strategic & Financial <br /> Advisory for Corporates
+				</h1>
 			</HeroSection>
 
 			<SingleCol

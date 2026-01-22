@@ -15,11 +15,11 @@ export default function DealOrientation() {
 			<HeroSection
 				{...dealOriginationHero}
 				video={dealOriginationVideo}
-				linkText='Access Off-Market Flow'
+				linkText='Discover More'
 				link='/contact'
 			>
 				<h1 className='flip-down'>
-					Deal <br /> Origination
+					Access Proprietary <br /> Deals Beyond the <br /> Competitive Market
 				</h1>
 			</HeroSection>
 

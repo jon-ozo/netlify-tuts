@@ -86,7 +86,7 @@ export const dealOriginationLists = [
 export const advisoryHero = {
 	heroHeader: '',
 	heroParagraph:
-		'A Smarter Way to Navigate Strategy, Capital and Change. Helping boards, executives, and shareholders make the decisions that define long-term value.',
+		'A Smarter Way to Navigate Strategy, Access Capital and Deliver Impact.',
 };
 
 export const advisoryLists = [

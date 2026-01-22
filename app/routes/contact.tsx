@@ -53,17 +53,6 @@ export default function Contact() {
 					bespoke and tailored solutions to our clients. Complete this brief
 					form to discuss engagement options.
 				</p>
-				<p className='center-sub-text slide-up align-text-left'>
-					Email:{' '}
-					<Link
-						ref={ref}
-						onClick={handleEmailHref}
-						to='mailto:'
-						className='email'
-					>
-						contact@<b className='hide-fake-text'>faketext</b>advianpartners.com
-					</Link>
-				</p>
 			</header>
 			<form
 				id='demo-form'
@@ -174,8 +163,19 @@ export default function Contact() {
 
 			<address className='center-sub-text slide-up'>
 				<h3>Address:</h3>
-				<b>60, rue Francois 1er,</b>
-				<br /> <b>75008, Paris,</b> <br /> <b>France.</b>
+				60, rue Francois 1er,
+				<br />
+				75008, Paris, <br /> France.
+				<p className='center-sub-text slide-up'>
+					<Link
+						ref={ref}
+						onClick={handleEmailHref}
+						to='mailto:'
+						className='email'
+					>
+						contact@<b className='hide-fake-text'>faketext</b>advianpartners.com
+					</Link>
+				</p>
 			</address>
 		</article>
 	);
