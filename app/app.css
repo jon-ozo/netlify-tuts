@@ -381,13 +381,19 @@ svg.contact-links:focus-visible {
   bottom: -10em;
 }
 
+.home-arrow {
+  width: 14.4px;
+  transform: rotateZ(90deg);
+}
+
 .center-align-title {
   text-align: center;
 }
 
 .menu {
-  border-block: .05em solid var(--linen);
+  border-block: .1px solid var(--linen_blur);
   margin-block-start: 5rem;
+  perspective: 200px;
 }
 
 .menu-list {
@@ -408,7 +414,7 @@ svg.contact-links:focus-visible {
 }
 
 .menu li+li {
-  border-block-start: .05em solid var(--linen);
+  border-block-start: .1px solid var(--linen_blur);
 }
 
 .paragraph-title {
@@ -458,7 +464,7 @@ svg.contact-links:focus-visible {
   color: var(--sandy_brown);
   margin-inline: auto;
   margin-top: .5em;
-  font-size: 1rem;
+  font-size: .9rem;
 }
 
 .home figure {
