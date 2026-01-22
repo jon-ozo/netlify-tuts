@@ -244,19 +244,6 @@ address h3 {
   font-weight: 500;
 }
 
-/* .top-nav-links>li:last-child>a {
-  display: inline-block;
-  padding: 1em 1.5em;
-  border-radius: 2em;
-  border: .1em solid var(--linen);
-}
-
-.top-nav-links>li:last-child>a:hover,
-.top-nav-links>li:last-child>a:focus-visible {
-  color: var(--silver);
-  background: var(--linen);
-} */
-
 .top-nav-links a {
   color: var(--linen);
   font-size: .9em;
@@ -299,13 +286,23 @@ address h3 {
   color: var(--mirage);
 }
 
+svg.contact-links {
+  fill: var(--mirage);
+  transition: var(--transition);
+}
+
+svg.contact-links:hover,
+svg.contact-links:focus-visible {
+  fill: var(--silver);
+}
+
 .hamburger {
   width: 10%;
 }
 
 .cancel-btn>svg {
   width: 10%;
-  fill: var(--text_color);
+  fill: var(--linen);
   float: right;
   cursor: pointer;
 }
@@ -911,8 +908,8 @@ address h3 {
 }
 
 .pri-btn svg {
-  rotate: 45deg 0;
   width: 18px;
+  rotate: 45deg 0;
 }
 
 .pri-btn:hover,

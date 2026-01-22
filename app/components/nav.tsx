@@ -13,6 +13,9 @@ export default function Nav() {
 	const location = useLocation();
 	const imgSrc = location.pathname === '/contact' ? contactLogoImg : logoImg;
 	const className = location.pathname === '/contact' ? 'contact-links' : '';
+	const hamburger =
+		location.pathname === '/contact' ? 'contact-links hamburger' : 'hamburger';
+
 	return (
 		<>
 			<div className={isVisible ? 'mobile-nav slide-in' : 'mobile-nav'}>
@@ -152,7 +155,7 @@ export default function Nav() {
 						height='24'
 						viewBox='0 0 24 24'
 						tabIndex={0}
-						className='hamburger'
+						className={hamburger}
 						onClick={handleClick}
 					>
 						<path d='M4 22h-4v-4h4v4zm0-12h-4v4h4v-4zm0-8h-4v4h4v-4zm3 0v4h17v-4h-17zm0 12h17v-4h-17v4zm0 8h17v-4h-17v4z' />
