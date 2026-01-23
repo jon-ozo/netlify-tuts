@@ -115,7 +115,7 @@ h3 {
 }
 
 p {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1em;
   line-height: 1.4;
 }
@@ -133,7 +133,8 @@ svg:focus-visible {
 
 summary {
   position: relative;
-  padding: 10px 15px;
+  padding-block: 10px;
+  padding-inline: 50px;
   cursor: pointer;
 }
 
@@ -151,7 +152,7 @@ summary::after {
   top: 50%;
   translate: 0 -50%;
   font-size: 2em;
-  right: 10px;
+  left: 10px;
   transition: transform 0.3s;
 }
 
@@ -549,6 +550,17 @@ svg.contact-links:focus-visible {
   overflow: hidden;
 }
 
+.ordered-list-wrapper a,
+.advisory-dropdown-list a {
+  margin-block-start: 5em;
+  color: var(--mirage);
+}
+
+.ordered-list-wrapper svg,
+.advisory-dropdown-list svg {
+  fill: var(--mirage);
+}
+
 .ordered-list {
   counter-reset: item 0;
 }
@@ -605,6 +617,7 @@ svg.contact-links:focus-visible {
   width: min(100%, 25ch);
   font-size: .9rem;
   padding-bottom: .5em;
+  font-weight: 400;
 }
 
 
@@ -621,12 +634,7 @@ svg.contact-links:focus-visible {
 .img-grid img {
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  border-radius: 2em 2em 0 0;
-}
-
-.img-grid img {
-  mask-image: linear-gradient(to top, transparent, var(--linen) 20%);
-  mask-repeat: no-repeat;
+  border-radius: 2em;
 }
 
 .img-grid ul {
@@ -778,13 +786,14 @@ figcaption {
 
 .ecosystem-container h2 {
   color: var(--mirage);
+  margin-block-end: 2em;
 }
 
 .slider {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(calc(100% - var(--padd)), 10em), 1fr));
   column-gap: 1em;
-  row-gap: 2em;
+  row-gap: 5em;
   margin-block-start: 2em;
 }
 

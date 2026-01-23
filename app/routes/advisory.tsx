@@ -38,6 +38,8 @@ export default function Advisory() {
 			<OrderedList
 				sectionTitle='How We Engage'
 				parentClassName='advisory-dropdown-list'
+				link='/contact'
+				linkText='Learn More'
 			>
 				{advisoryLists.map((list) => (
 					<li key={list.title}>

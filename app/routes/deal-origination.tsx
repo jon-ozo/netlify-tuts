@@ -40,6 +40,8 @@ export default function DealOrientation() {
 				sectionTitle='Our Approach'
 				parentClassName='ordered-list-wrapper'
 				className='ordered-list'
+				link='/contact'
+				linkText='Learn More'
 			>
 				{dealOriginationLists.map((list) => (
 					<li key={list.title}>

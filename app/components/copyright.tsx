@@ -17,7 +17,7 @@ export default function Copyright() {
 					target='_blank'
 					rel='noreferrer'
 				>
-					John Ozoemena
+					WeeFeex Enterprise
 				</Link>
 			</small>
 		</p>
