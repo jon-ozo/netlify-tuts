@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router';
 import contactImg from '~/assets/img/contact-logo.png';
+import Copyright from '~/components/copyright';
 import Svg from '~/components/svg';
 
 export default function Contact() {
@@ -114,6 +115,7 @@ export default function Contact() {
 						name='interest'
 						required
 					>
+						<option value=''>What interests you?</option>
 						<option value='deal origination'>Deal Origination</option>
 						<option value='advisory'>Advisory Services</option>
 					</select>
@@ -189,6 +191,7 @@ export default function Contact() {
 					</Link>
 				</p>
 			</address>
+			<Copyright />
 		</article>
 	);
 }

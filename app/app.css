@@ -70,10 +70,10 @@ nav {
 article,
 footer {
   border-radius: 1rem 1rem 0 0;
-  padding-block: 5em;
 }
 
 article {
+  padding-block: 5em;
   width: var(--width);
   margin-inline: auto;
 }
@@ -82,6 +82,7 @@ footer {
   background: linear-gradient(to top, var(--mirage), var(--pickle_blue));
   color: var(--linen);
   padding-inline: var(--gap);
+  padding-block-start: 5em;
   isolation: isolate;
 }
 
@@ -131,10 +132,8 @@ svg:focus-visible {
 }
 
 summary {
-  background-color: #f1f1f1;
+  position: relative;
   padding: 10px 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -147,32 +146,22 @@ summary::-webkit-details-marker {
 }
 
 summary::after {
-  content: '▼';
-  float: right;
+  content: '+';
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  font-size: 2em;
+  right: 10px;
   transition: transform 0.3s;
 }
 
 details[open] summary::after {
-  content: '▲';
+  content: '-';
+  font-size: 2em;
   transform: rotate(180deg);
 }
 
-.dropdown-content {
-  display: none;
-  padding: 10px 15px;
-  border: 1px solid #ccc;
-  border-top: none;
-  background-color: #fff;
-  position: absolute;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  min-width: 160px;
-}
-
-details[open] .dropdown-content {
-  display: block;
-}
-
-/* details {
+details {
   margin-bottom: .5em;
   cursor: pointer;
   padding: 1em;
@@ -181,10 +170,10 @@ details[open] .dropdown-content {
 }
 
 details>p {
-  padding-top: var(--gap);
+  padding-inline: 15px;
   line-height: 1.5;
-  font-size: .8em;
-} */
+  font-size: 1rem;
+}
 
 form {
   width: min(calc(100% - var(--gap)), 40em);
@@ -587,6 +576,7 @@ svg.contact-links:focus-visible {
   margin: 0;
   background: var(--linen);
   border-radius: 0;
+  padding-block-end: 0;
 }
 
 .contact-page-container address {
@@ -793,7 +783,8 @@ figcaption {
 .slider {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(calc(100% - var(--padd)), 10em), 1fr));
-  gap: 1em;
+  column-gap: 1em;
+  row-gap: 2em;
   margin-block-start: 2em;
 }
 
@@ -805,88 +796,6 @@ figcaption {
   aspect-ratio: 16 / 8;
   object-fit: contain;
 }
-
-/* .slider>* {
-  position: absolute;
-  top: 0;
-  left: calc(200px * 16);
-  width: 200px;
-  height: 200px;
-  border-radius: var(--border-radius);
-  padding: 2em;
-}
-
-.slider-group:hover>* {
-  animation-play-state: paused;
-}
-
-.slider-group>* {
-  animation: scroll-img 120s linear infinite;
-}
-
-.slider-group>:nth-child(1) {
-  animation-delay: calc(120s / 16 * (16 - 1) * -1);
-}
-
-.slider-group>:nth-child(2) {
-  animation-delay: calc(120s / 16 * (16 - 2) * -1);
-}
-
-.slider-group>:nth-child(3) {
-  animation-delay: calc(120s / 16 * (16 - 3) * -1);
-}
-
-.slider-group>:nth-child(4) {
-  animation-delay: calc(120s / 16 * (16 - 4) * -1);
-}
-
-.slider-group>:nth-child(5) {
-  animation-delay: calc(120s / 16 * (16 - 5) * -1);
-}
-
-.slider-group>:nth-child(6) {
-  animation-delay: calc(120s / 16 * (16 - 6) * -1);
-}
-
-.slider-group>:nth-child(7) {
-  animation-delay: calc(120s / 16 * (16 - 7) * -1);
-}
-
-.slider-group>:nth-child(8) {
-  animation-delay: calc(120s / 16 * (16 - 8) * -1);
-}
-
-.slider-group>:nth-child(9) {
-  animation-delay: calc(100s / 16 * (16 - 9) * -1);
-}
-
-.slider-group>:nth-child(10) {
-  animation-delay: calc(100s / 16 * (16 - 10) * -1);
-}
-
-.slider-group>:nth-child(11) {
-  animation-delay: calc(100s / 16 * (16 - 11) * -1);
-}
-
-.slider-group>:nth-child(12) {
-  animation-delay: calc(100s / 16 * (16 - 12) * -1);
-}
-
-.slider-group>:nth-child(13) {
-  animation-delay: calc(100s / 16 * (16 - 13) * -1);
-}
-
-.slider-group>:nth-child(14) {
-  animation-delay: calc(100s / 16 * (16 - 14) * -1);
-}
-
-.slider-group>:nth-child(15) {
-  animation-delay: calc(100s / 16 * (16 - 15) * -1);
-}
-
-.slider-group>:nth-child(16) {
-  animation-delay: calc(100s / 16 * (16 - 16) * -1);
-} */
 
 .contact-logo {
   display: grid;
@@ -921,6 +830,28 @@ figcaption {
 .custom-select {
   position: relative;
   display: inline-block;
+}
+
+.copyright {
+  font-size: smaller;
+  margin-block-start: 5em;
+  padding-block-end: 1em;
+  color: var(--linen_blur);
+}
+
+.copyright a {
+  color: var(--linen_blur);
+}
+
+.copyright-contact-page {
+  margin-block-start: 5em;
+  padding-block-end: 1em;
+  color: var(--mirage);
+  font-size: smaller;
+}
+
+.copyright-contact-page a {
+  color: var(--mirage);
 }
 
 .select-arrow {

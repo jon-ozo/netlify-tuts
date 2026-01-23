@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 import footerLogo from '~/assets/img/footer-logo.png';
 import ImgGrid from './img-grid';
+import Copyright from './copyright';
 
 export default function FooterCta() {
 	return (
@@ -103,6 +104,7 @@ export default function FooterCta() {
 					<Link to='/legal-notice'>Legal Notice</Link>.
 				</p>
 			</div>
+			<Copyright />
 		</footer>
 	);
 }
