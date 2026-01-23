@@ -30,7 +30,7 @@ export default function OrderedList({
 				<p className='container'>
 					<Link
 						to={link}
-						className='pri-btn'
+						className='learn-more'
 					>
 						{linkText}
 						<svg

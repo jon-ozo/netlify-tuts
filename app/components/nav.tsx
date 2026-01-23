@@ -94,7 +94,7 @@ export default function Nav() {
 					</NavLink>
 				</div> */}
 			</div>
-			<nav className='margin-top slide-down'>
+			<nav className='slide-down'>
 				<div className='container flex-display '>
 					<figure className='logo'>
 						<Link to='/'>

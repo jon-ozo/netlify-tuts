@@ -60,11 +60,12 @@ li {
 
 nav {
   width: 100%;
-  padding-block: .5em;
+  padding-block: 1em;
   padding-inline: var(--gap);
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 5;
+  background: rgba(44, 59, 78, 0.082);
 }
 
 article,
@@ -274,6 +275,7 @@ address h3 {
   font-size: .8em;
   font-weight: 500;
   transition: var(--transition);
+  letter-spacing: 1.5px;
 }
 
 .top-nav-links a:hover:not(a.active-link),
@@ -366,6 +368,7 @@ svg.contact-links:focus-visible {
   font-size: .9em;
   color: var(--linen);
   transition: var(--transition);
+  letter-spacing: 1.5px;
 }
 
 .mobile-nav a:hover,
@@ -791,7 +794,7 @@ figcaption {
 
 .slider {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(calc(100% - var(--padd)), 10em), 1fr));
+  grid-template-columns: 1fr 1fr 1fr;
   column-gap: 1em;
   row-gap: 5em;
   margin-block-start: 2em;
@@ -1031,6 +1034,7 @@ figcaption {
 .header-sub-text {
   width: min(calc(100% - var(--gap)), 40em);
   margin-block: var(--gap);
+  padding-top: 1em;
 }
 
 .pri-btn {
@@ -1060,6 +1064,37 @@ figcaption {
 
 .pri-btn:hover,
 .pri-btn:focus-visible {
+  border-block-end: .1em solid var(--linen);
+  gap: 1em
+}
+
+.learn-more {
+  font-size: clamp(.8rem, 1vw + .8rem, 1.2rem);
+  font-weight: 500;
+  display: flex;
+  gap: .5em;
+  align-items: center;
+  color: var(--linen);
+  border-block-end: .1em solid var(--mirage);
+  width: fit-content;
+  padding-block-start: 2em;
+  padding-block-end: .5em;
+  color: var(--linen);
+  transition: var(--transition);
+  perspective: 200px;
+
+  @media (min-width: 60em) {
+    width: fit-content;
+  }
+}
+
+.learn-more svg {
+  width: 18px;
+  transform: rotateZ(45deg);
+}
+
+.learn-more:hover,
+.learn-more:focus-visible {
   border-block-end: .1em solid var(--linen);
   gap: 1em
 }
@@ -1259,6 +1294,7 @@ figcaption {
 .web-link {
   text-decoration: none;
   color: var(--mirage);
+  font-weight: 300;
 }
 
 .font-xs {
@@ -1361,6 +1397,10 @@ figcaption {
 
   h2 {
     font-size: clamp(1.2em, 1vw + 2em, 4.1em);
+  }
+
+  .slider {
+    grid-template-columns: repeat(auto-fit, minmax(min(calc(100% - var(--padd)), 10em), 1fr));
   }
 
   .marketing-stats>* {
