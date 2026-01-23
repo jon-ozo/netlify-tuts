@@ -8,6 +8,7 @@ import {
 	advisoryLists,
 	advisoryMarketing,
 } from '~/utils/constants';
+import ImgSlider from '~/components/img-slider';
 
 export default function Advisory() {
 	return (
@@ -34,18 +35,26 @@ export default function Advisory() {
 				</h2>
 			</SingleCol>
 
-			<OrderedList sectionTitle='How We Engage'>
+			<OrderedList
+				sectionTitle='How We Engage'
+				parentClassName='advisory-dropdown-list'
+			>
 				{advisoryLists.map((list) => (
 					<li key={list.title}>
-						<details>
+						<details
+							name='advisory'
+							className='details'
+						>
 							<summary>
 								<h3 className='slide-up'>{list.title}</h3>
 							</summary>
-							<p className='slide-up'>{list.text}</p>
+							<p className='slide-up dropdown-content'>{list.text}</p>
 						</details>
 					</li>
 				))}
 			</OrderedList>
+
+			<ImgSlider />
 
 			<FooterCta />
 		</>

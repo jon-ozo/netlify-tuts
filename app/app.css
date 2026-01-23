@@ -131,17 +131,48 @@ svg:focus-visible {
 }
 
 summary {
-  font-weight: 500;
-  font-size: .9em;
+  background-color: #f1f1f1;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-summary::marker {
-  content: '+  ';
-  font-size: 1.8em;
-  color: var(--khaki_color);
+summary {
+  list-style: none;
 }
 
-details {
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: '▼';
+  float: right;
+  transition: transform 0.3s;
+}
+
+details[open] summary::after {
+  content: '▲';
+  transform: rotate(180deg);
+}
+
+.dropdown-content {
+  display: none;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: #fff;
+  position: absolute;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 160px;
+}
+
+details[open] .dropdown-content {
+  display: block;
+}
+
+/* details {
   margin-bottom: .5em;
   cursor: pointer;
   padding: 1em;
@@ -153,7 +184,7 @@ details>p {
   padding-top: var(--gap);
   line-height: 1.5;
   font-size: .8em;
-}
+} */
 
 form {
   width: min(calc(100% - var(--gap)), 40em);
@@ -518,7 +549,8 @@ svg.contact-links:focus-visible {
 
 
 /* ordered-list-wrapper style */
-.ordered-list-wrapper {
+.ordered-list-wrapper,
+.advisory-dropdown-list {
   width: 100%;
   margin-inline: 0;
   background: var(--linen);
@@ -750,20 +782,31 @@ figcaption {
 
 
 /* img slider */
+.coverage {
+  padding-block: 5em;
+}
+
 .ecosystem-container h2 {
-  color: var(--linen);
+  color: var(--mirage);
 }
 
 .slider {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  overflow-x: hidden;
-  margin-top: var(--column_gap);
-  min-block-size: 30vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(calc(100% - var(--padd)), 10em), 1fr));
+  gap: 1em;
+  margin-block-start: 2em;
 }
 
-.slider>* {
+.slider li {
+  justify-self: center;
+}
+
+.slider img {
+  aspect-ratio: 16 / 8;
+  object-fit: contain;
+}
+
+/* .slider>* {
   position: absolute;
   top: 0;
   left: calc(200px * 16);
@@ -843,7 +886,7 @@ figcaption {
 
 .slider-group>:nth-child(16) {
   animation-delay: calc(100s / 16 * (16 - 16) * -1);
-}
+} */
 
 .contact-logo {
   display: grid;
@@ -1483,8 +1526,8 @@ figcaption {
   }
 }
 
-@keyframes scroll-img {
+/* @keyframes scroll-img {
   to {
     left: -200px;
   }
-}
+} */

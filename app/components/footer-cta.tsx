@@ -1,13 +1,11 @@
 import { Link } from 'react-router';
 import footerLogo from '~/assets/img/footer-logo.png';
 import ImgGrid from './img-grid';
-import ImgSlider from './img-slider';
 
 export default function FooterCta() {
 	return (
 		<footer className='footer'>
 			<ImgGrid />
-			<ImgSlider />
 			<ul className='container flex-display-column row-gap-xs'>
 				<li>
 					<h2 className='center-align-title slide-up'>Get in Touch</h2>
@@ -96,7 +94,7 @@ export default function FooterCta() {
 					</Link>{' '}
 					(the "Advian Partners Website") is a website operated by Advian
 					Partners SAS, a privately held France-based SAS company. Advian
-					Partners SAS provides financial and strategic advisory, conslting
+					Partners SAS provides financial and strategic advisory, consulting
 					sevices, mergers and acquisitions services, and capital raising
 					services. Some of our transactions shown reflect deals done while our
 					advisors or team were at prior firms.{' '}

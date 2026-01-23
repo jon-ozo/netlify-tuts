@@ -22,7 +22,7 @@ export function Img({ imgSrc, altSrc, width, height }: ImgProps) {
 
 export default function ImgSlider() {
 	return (
-		<section>
+		<section className='coverage container'>
 			<header className='container ecosystem-container'>
 				<h2 className='center-align-title slide-up'>
 					The Ecosystem We Built Upon
@@ -34,8 +34,8 @@ export default function ImgSlider() {
 						<Img
 							imgSrc={logo.src}
 							altSrc={logo.alt}
-							width='200'
-							height='200'
+							width='100'
+							height='100'
 						/>
 					</li>
 				))}

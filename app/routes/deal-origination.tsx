@@ -8,6 +8,7 @@ import {
 	dealOriginationLists,
 	dealOriginationMarketing,
 } from '~/utils/constants';
+import ImgSlider from '~/components/img-slider';
 
 export default function DealOrientation() {
 	return (
@@ -37,6 +38,7 @@ export default function DealOrientation() {
 
 			<OrderedList
 				sectionTitle='Our Approach'
+				parentClassName='ordered-list-wrapper'
 				className='ordered-list'
 			>
 				{dealOriginationLists.map((list) => (
@@ -46,6 +48,8 @@ export default function DealOrientation() {
 					</li>
 				))}
 			</OrderedList>
+
+			<ImgSlider />
 
 			<FooterCta />
 		</>
