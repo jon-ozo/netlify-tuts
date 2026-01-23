@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router';
 import contactImg from '~/assets/img/contact-logo.png';
+import Svg from '~/components/svg';
 
 export default function Contact() {
 	const [successStatus, setSuccessStatus] = useState('');
@@ -106,22 +107,28 @@ export default function Contact() {
 					/>
 				</div>
 
-				<div>
+				<div className='custom-select'>
 					<label htmlFor='interest'>Interest</label>
 					<select
 						id='interest'
 						name='interest'
 						required
 					>
-						<option
-							value='Deal origination'
-							disabled
-							selected
-						>
-							What Service Peaked Your Interest?
-						</option>
-						<option value='Advisory'>Advisory Services</option>
+						<option value='deal origination'>Deal Origination</option>
+						<option value='advisory'>Advisory Services</option>
 					</select>
+					<div className='select-arrow'>
+						<Svg
+							svgProps={{
+								viewBox: '0 0 24 24',
+								xmlns: 'http://www.w3.org/2000/svg',
+								fillRule: 'evenodd',
+								clipRule: 'evenodd',
+							}}
+						>
+							<path d='M23.245 4l-11.245 14.374-11.219-14.374-.781.619 12 15.381 12-15.391-.755-.609z' />
+						</Svg>
+					</div>
 				</div>
 
 				<div>
@@ -168,7 +175,7 @@ export default function Contact() {
 						height={40}
 					/>
 				</figure>
-				60, rue Francois 1er,
+				60, rue François 1er,
 				<br />
 				75008, Paris, <br /> France.
 				<p className='center-sub-text slide-up'>

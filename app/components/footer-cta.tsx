@@ -1,9 +1,13 @@
 import { Link } from 'react-router';
 import footerLogo from '~/assets/img/footer-logo.png';
+import ImgGrid from './img-grid';
+import ImgSlider from './img-slider';
 
 export default function FooterCta() {
 	return (
 		<footer className='footer'>
+			<ImgGrid />
+			<ImgSlider />
 			<ul className='container flex-display-column row-gap-xs'>
 				<li>
 					<h2 className='center-align-title slide-up'>Get in Touch</h2>
@@ -38,7 +42,7 @@ export default function FooterCta() {
 					<li>
 						<p className='address-title slide-up'>FRANCE</p>
 						<address className='footer-address slide-up'>
-							60, rue Francois 1er,
+							60, rue François 1er,
 							<br /> 75008, Paris, <br /> France.
 						</address>
 					</li>
@@ -73,7 +77,7 @@ export default function FooterCta() {
 					</li>
 					<li className='slide-up'>
 						<Link
-							to=''
+							to='https://x.com/AdvianPartners'
 							className='footer-socials'
 						>
 							X

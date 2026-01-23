@@ -34,10 +34,18 @@ export default function Advisory() {
 				</h2>
 			</SingleCol>
 
-			<OrderedList
-				sectionTitle='How We Engage'
-				lists={advisoryLists}
-			/>
+			<OrderedList sectionTitle='How We Engage'>
+				{advisoryLists.map((list) => (
+					<li key={list.title}>
+						<details>
+							<summary>
+								<h3 className='slide-up'>{list.title}</h3>
+							</summary>
+							<p className='slide-up'>{list.text}</p>
+						</details>
+					</li>
+				))}
+			</OrderedList>
 
 			<FooterCta />
 		</>

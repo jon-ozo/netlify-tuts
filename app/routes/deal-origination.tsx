@@ -37,8 +37,15 @@ export default function DealOrientation() {
 
 			<OrderedList
 				sectionTitle='Our Approach'
-				lists={dealOriginationLists}
-			/>
+				className='ordered-list'
+			>
+				{dealOriginationLists.map((list) => (
+					<li key={list.title}>
+						<h3 className='slide-up'>{list.title}</h3>
+						<p className='slide-up'>{list.text}</p>
+					</li>
+				))}
+			</OrderedList>
 
 			<FooterCta />
 		</>
