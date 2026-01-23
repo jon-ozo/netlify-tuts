@@ -60,12 +60,11 @@ li {
 
 nav {
   width: 100%;
-  padding-block: 1em;
+  padding-block: .5em;
   padding-inline: var(--gap);
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 5;
-  background: rgba(44, 59, 78, 0.082);
 }
 
 article,
@@ -542,8 +541,7 @@ svg.contact-links:focus-visible {
 
 
 /* ordered-list-wrapper style */
-.ordered-list-wrapper,
-.advisory-dropdown-list {
+.ordered-list-wrapper {
   width: 100%;
   margin-inline: 0;
   background: var(--linen);
@@ -553,35 +551,17 @@ svg.contact-links:focus-visible {
   overflow: hidden;
 }
 
-.ordered-list-wrapper a,
-.advisory-dropdown-list a {
+.ordered-list-wrapper a {
   margin-block-start: 5em;
   color: var(--mirage);
 }
 
-.ordered-list-wrapper svg,
-.advisory-dropdown-list svg {
+.ordered-list-wrapper svg {
   fill: var(--mirage);
 }
 
-.ordered-list {
-  counter-reset: item 0;
-}
-
-.ordered-list li+li {
-  margin-top: 1em;
-}
-
-.ordered-list li {
-  width: fit-content;
-  position: relative;
-  padding: 2em;
-  border-radius: var(--border_radius);
-  background: linear-gradient(to bottom, #c9c2b23f, var(--linen));
-}
-
-.ordered-list p {
-  width: min(calc(100% - var(--gap)), 70ch);
+.ordered-list-wrapper>div>ol {
+  padding-block-start: 4em;
 }
 
 

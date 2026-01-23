@@ -39,14 +39,20 @@ export default function DealOrientation() {
 			<OrderedList
 				sectionTitle='Our Approach'
 				parentClassName='ordered-list-wrapper'
-				className='ordered-list'
 				link='/contact'
 				linkText='Learn More'
 			>
 				{dealOriginationLists.map((list) => (
 					<li key={list.title}>
-						<h3 className='slide-up'>{list.title}</h3>
-						<p className='slide-up'>{list.text}</p>
+						<details
+							name='advisory'
+							className='details'
+						>
+							<summary>
+								<h3 className='slide-up'>{list.title}</h3>
+							</summary>
+							<p className='slide-up dropdown-content'>{list.text}</p>
+						</details>
 					</li>
 				))}
 			</OrderedList>

@@ -65,7 +65,8 @@ export default function FooterCta() {
 					<li className='footer-links-title slide-up'>CONNECT</li>
 					<li className='slide-up'>
 						<Link
-							to=''
+							to='https://www.linkedin.com/company/advian-partners/'
+							rel='noreferrer'
 							className='footer-socials'
 						>
 							LinkedIn
@@ -77,6 +78,7 @@ export default function FooterCta() {
 					<li className='slide-up'>
 						<Link
 							to='https://x.com/AdvianPartners'
+							rel='noreferrer'
 							className='footer-socials'
 						>
 							X

@@ -37,7 +37,7 @@ export default function Advisory() {
 
 			<OrderedList
 				sectionTitle='How We Engage'
-				parentClassName='advisory-dropdown-list'
+				parentClassName='ordered-list-wrapper'
 				link='/contact'
 				linkText='Learn More'
 			>
