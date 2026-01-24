@@ -29,7 +29,7 @@ export function Img({ imgSrc, altSrc, caption, width, height }: ImgProps) {
 
 export default function ImgGrid() {
 	return (
-		<section className='container img-grid opacity'>
+		<section className='container img-grid'>
 			<header>
 				<h2 className='center-align-title slide-up'>
 					Our Coverage and Network

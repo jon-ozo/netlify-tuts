@@ -5,7 +5,7 @@ import Copyright from './copyright';
 
 export default function FooterCta() {
 	return (
-		<footer className='footer opacity'>
+		<footer className='footer'>
 			<ImgGrid />
 			<ul className='container flex-display-column row-gap-xs'>
 				<li>

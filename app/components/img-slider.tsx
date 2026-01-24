@@ -22,7 +22,7 @@ export function Img({ imgSrc, altSrc, width, height }: ImgProps) {
 
 export default function ImgSlider() {
 	return (
-		<section className='coverage container opacity'>
+		<section className='coverage container'>
 			<header className='container ecosystem-container'>
 				<h2 className='center-align-title slide-up'>
 					The Ecosystem We Built Upon

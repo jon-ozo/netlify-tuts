@@ -15,7 +15,7 @@ export default function OrderedList({
 	link,
 	linkText,
 }: OlProps) {
-	const newParentClassName = `${parentClassName} flex-display-column row-gap-s opacity`;
+	const newParentClassName = `${parentClassName} flex-display-column row-gap-s`;
 
 	return (
 		<article className={newParentClassName}>
