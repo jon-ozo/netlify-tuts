@@ -103,9 +103,9 @@ export default function App() {
 					enableDeclineButton
 					buttonText='I accept'
 					cookieName='consentCookie'
-					style={{ background: '#F1F7F6', color: '#333' }}
-					buttonStyle={{ background: '#032221', color: '#F1F7F6' }}
-					declineButtonStyle={{ background: '#C3B899', color: '#333' }}
+					style={{ background: '#1c263254', color: '#EDE9DE' }}
+					buttonStyle={{ background: '#1C2632', color: '#F1F7F6' }}
+					declineButtonStyle={{ background: '#EDE9DE', color: '#1C2632' }}
 					onAccept={() => {
 						// Handle cookie acceptance (e.g., set analytics cookies)
 						console.log('Cookies accepted');

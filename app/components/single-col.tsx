@@ -10,7 +10,7 @@ export default function SingleCol({
 	marketingLists,
 }: componentProps) {
 	return (
-		<article>
+		<article className='opacity'>
 			<div className='container flex-display-column'>
 				<header>
 					{children}

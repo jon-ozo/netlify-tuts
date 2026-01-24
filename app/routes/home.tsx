@@ -32,7 +32,7 @@ export default function Home() {
 		<article className='home'>
 			<div className='container'>
 				<header className='center-align-title'>
-					<figure className='flip-down'>
+					<figure className='slide-down'>
 						<img
 							className='home-logo'
 							src={footerLogo}

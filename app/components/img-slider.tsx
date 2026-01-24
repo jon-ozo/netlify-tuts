@@ -22,13 +22,13 @@ export function Img({ imgSrc, altSrc, width, height }: ImgProps) {
 
 export default function ImgSlider() {
 	return (
-		<section className='coverage container'>
+		<section className='coverage container opacity'>
 			<header className='container ecosystem-container'>
 				<h2 className='center-align-title slide-up'>
 					The Ecosystem We Built Upon
 				</h2>
 			</header>
-			<ul className='slider slider-group'>
+			<ul className='slider slider-group slide-up'>
 				{arrOfBrandLogo.map((logo) => (
 					<li key={logo.alt}>
 						<Img

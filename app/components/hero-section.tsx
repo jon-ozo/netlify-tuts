@@ -39,7 +39,7 @@ export default function HeroSection({
 
 				<Link
 					to={link}
-					className='pri-btn'
+					className='pri-btn slide-up'
 				>
 					{linkText}
 					<svg
@@ -56,17 +56,6 @@ export default function HeroSection({
 							fillRule='nonzero'
 						/>
 					</svg>
-					{/* <svg
-						aria-hidden='true'
-						width='24'
-						height='24'
-						xmlns='http://www.w3.org/2000/svg'
-						fillRule='evenodd'
-						clipRule='evenodd'
-						className='nav-arrow'
-					>
-						<path d='M14 4h-13v18h20v-11h1v12h-22v-20h14v1zm10 5h-1v-6.293l-11.646 11.647-.708-.708 11.647-11.646h-6.293v-1h8v8z' />
-					</svg> */}
 				</Link>
 			</section>
 		</header>

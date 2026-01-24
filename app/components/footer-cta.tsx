@@ -5,7 +5,7 @@ import Copyright from './copyright';
 
 export default function FooterCta() {
 	return (
-		<footer className='footer'>
+		<footer className='footer opacity'>
 			<ImgGrid />
 			<ul className='container flex-display-column row-gap-xs'>
 				<li>
@@ -55,10 +55,20 @@ export default function FooterCta() {
 						<Link to='/deal-origination'>DEAL ORIGINATION</Link>
 					</li>
 					<li className='slide-up'>
-						<Link to='/advisory'>ADVISORY</Link>
+						<Link
+							to='/advisory'
+							className='slide-up'
+						>
+							ADVISORY
+						</Link>
 					</li>
 					<li className='slide-up'>
-						<Link to='/contact'>CONTACT</Link>
+						<Link
+							to='/contact'
+							className='slide-up'
+						>
+							CONTACT
+						</Link>
 					</li>
 				</ul>
 				<ul className='footer-links'>
@@ -67,11 +77,11 @@ export default function FooterCta() {
 						<Link
 							to='https://www.linkedin.com/company/advian-partners/'
 							rel='noreferrer'
-							className='footer-socials'
+							className='footer-socials slide-up'
 						>
 							LinkedIn
 						</Link>
-						<span className='footer-socials-span'>
+						<span className='footer-socials-span slide-up'>
 							Connect with us on LinkedIn.
 						</span>
 					</li>
@@ -79,11 +89,13 @@ export default function FooterCta() {
 						<Link
 							to='https://x.com/AdvianPartners'
 							rel='noreferrer'
-							className='footer-socials'
+							className='footer-socials slide-up'
 						>
 							X
 						</Link>
-						<span className='footer-socials-span'>Connect with us on X.</span>
+						<span className='footer-socials-span slide-up'>
+							Connect with us on X.
+						</span>
 					</li>
 				</ul>
 			</div>

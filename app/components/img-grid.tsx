@@ -29,13 +29,13 @@ export function Img({ imgSrc, altSrc, caption, width, height }: ImgProps) {
 
 export default function ImgGrid() {
 	return (
-		<section className='container img-grid'>
+		<section className='container img-grid opacity'>
 			<header>
 				<h2 className='center-align-title slide-up'>
 					Our Coverage and Network
 				</h2>
 			</header>
-			<ul className='margin-top'>
+			<ul className='margin-top slide-up'>
 				<Img
 					imgSrc={cityEurope}
 					altSrc='A City in Europe.'

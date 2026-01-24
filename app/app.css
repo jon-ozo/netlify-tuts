@@ -93,16 +93,12 @@ h1 {
   transform: rotateX(30deg);
   font-weight: 100;
   font-family: var(--eb_garamond);
-
-  animation-delay: 1.5s;
 }
 
 h2 {
   font-size: clamp(1.2em, 1vw + 1.4em, 3.5em);
   line-height: 1.1;
   font-weight: 100;
-  /* width: min(calc(100% - var(--gap)), 30ch);
-  margin-inline: auto; */
   font-family: var(--eb_garamond);
 }
 
@@ -110,7 +106,6 @@ h3 {
   margin-block: .5em;
   font-weight: 400;
   font-size: 1.3em;
-  /* font-family: var(--eb_garamond); */
   line-height: 1;
 }
 
@@ -643,9 +638,11 @@ figcaption {
 /* footer cta section */
 .footer {
   position: relative;
+  overflow: hidden;
 }
 
-.footer::after {
+.footer::after,
+.footer::before {
   content: '';
   position: absolute;
   z-index: -1;
@@ -660,6 +657,11 @@ figcaption {
 .footer::after {
   top: 5%;
   right: 50%;
+}
+
+.footer::before {
+  bottom: 0;
+  left: 0;
 }
 
 .footer h2 {
@@ -1281,21 +1283,12 @@ figcaption {
   font-size: .8em;
 }
 
-
-/* animations */
-.slide-down,
-.zoom-out,
-.flip-down,
-.slide-up,
-.slide-in-left,
-.slide-in-right,
-.reveal-card,
-.expand {
-  animation-duration: 1s;
-  animation-timing-function: cubic-bezier(0, .88, .62, 1.29);
-  animation-fill-mode: both;
+.opacity {
+  opacity: 0;
 }
 
+
+/* animations */
 .slide-down {
   animation-name: slide-down;
 }
@@ -1330,6 +1323,19 @@ figcaption {
 
 .slide-in {
   animation: slide-in 1s cubic-bezier(0, .88, .62, 1.29) forwards;
+}
+
+.slide-down,
+.zoom-out,
+.flip-down,
+.slide-up,
+.slide-in-left,
+.slide-in-right,
+.reveal-card,
+.expand {
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0, .88, .62, 1.29);
+  animation-fill-mode: both;
 }
 
 
