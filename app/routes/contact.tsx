@@ -50,11 +50,11 @@ export default function Contact() {
 	return (
 		<article className='contact-page-container'>
 			<header className='container margin-top flex-display-column row-gap-s'>
-				<h2 className='container center-align-title slide-up margin-top'>
+				<h2 className='container center-align-title slide-up animation-duration_1s margin-top'>
 					Talk to Us
 				</h2>
-				<p className='center-sub-text slide-up'>
-					For both our Deal Origination and advisory services, we deliver
+				<p className='center-sub-text slide-up animation-duration_1s'>
+					For both our deal origination and advisory services, we deliver
 					bespoke and tailored solutions to our clients. Complete this brief
 					form to discuss engagement options.
 				</p>
@@ -63,8 +63,9 @@ export default function Contact() {
 				id='demo-form'
 				ref={form}
 				onSubmit={sendEmail}
+				className='slide-up animation-duration_1s'
 			>
-				<ul className='grid-display-form'>
+				<ul className='grid-display-form animate-list'>
 					<li>
 						<label htmlFor='firstName'>First name</label>
 						<input

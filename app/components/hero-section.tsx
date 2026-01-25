@@ -35,11 +35,11 @@ export default function HeroSection({
 			<div className='overlay'></div>
 			<section className='hero-text-wrapper'>
 				{children}
-				<p className='h1-sub-text slide-up'>{heroParagraph}</p>
+				<p className='h1-sub-text'>{heroParagraph}</p>
 
 				<Link
 					to={link}
-					className='pri-btn slide-up'
+					className='pri-btn'
 				>
 					{linkText}
 					<svg

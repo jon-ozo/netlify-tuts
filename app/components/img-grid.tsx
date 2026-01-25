@@ -14,7 +14,7 @@ interface ImgProps {
 export function Img({ imgSrc, altSrc, caption, width, height }: ImgProps) {
 	return (
 		<li>
-			<figure>
+			<figure className='zoom-out animation-timeline'>
 				<img
 					src={imgSrc}
 					alt={altSrc}
@@ -31,11 +31,11 @@ export default function ImgGrid() {
 	return (
 		<section className='container img-grid'>
 			<header>
-				<h2 className='center-align-title slide-up'>
+				<h2 className='center-align-title zoom-out animation-timeline'>
 					Our Coverage and Network
 				</h2>
 			</header>
-			<ul className='margin-top slide-up'>
+			<ul className='margin-top'>
 				<Img
 					imgSrc={cityEurope}
 					altSrc='A City in Europe.'

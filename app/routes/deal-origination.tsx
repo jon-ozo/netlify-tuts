@@ -25,10 +25,10 @@ export default function DealOrientation() {
 			</HeroSection>
 
 			<SingleCol
-				paragraph='At Advian Partners, we redefine deal origination by sourcing privately negotiated opportunities through deep sector insight and long-standing relationships. Our proprietary origination model combines strategic intelligence, on-the-ground market access across the EMEA region, and disciplined screening to deliver high-quality, off-market transactions aligned with each client’s investment objectives.'
+				paragraph='At Advian Partners, we redefine deal origination by sourcing privately negotiated opportunities through deep sector insight and long-standing relationships. Our proprietary origination model combines strategic intelligence, on-the-ground market access, and disciplined screening to deliver high-quality, off-market transactions aligned with each client’s investment objectives.'
 				marketingLists={dealOriginationMarketing}
 			>
-				<h2 className='slide-up'>
+				<h2 className='zoom-out animation-timeline'>
 					A Proprietary <br />
 					Deal Origination <br />
 					Model Built on Strategic <br />
@@ -43,15 +43,20 @@ export default function DealOrientation() {
 				linkText='Learn More'
 			>
 				{dealOriginationLists.map((list) => (
-					<li key={list.title}>
+					<li
+						className='ordered-list zoom-out animation-timeline'
+						key={list.title}
+					>
 						<details
 							name='advisory'
 							className='details'
 						>
 							<summary>
-								<h3 className='slide-up'>{list.title}</h3>
+								<h3>{list.title}</h3>
 							</summary>
-							<p className='slide-up dropdown-content'>{list.text}</p>
+							<p className='slide-up animation-duration_1s dropdown-content'>
+								{list.text}
+							</p>
 						</details>
 					</li>
 				))}

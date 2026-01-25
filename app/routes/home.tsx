@@ -32,7 +32,7 @@ export default function Home() {
 		<article className='home'>
 			<div className='container'>
 				<header className='center-align-title'>
-					<figure className='slide-down'>
+					<figure>
 						<img
 							className='home-logo'
 							src={footerLogo}
@@ -49,7 +49,7 @@ export default function Home() {
 							to='deal-origination'
 							className='menu-list'
 						>
-							<p className='slide-up'>
+							<p className='slide-up animation-duration_1s'>
 								<span className='paragraph-title'>Deal Origination</span>
 								<span className='paragraph-sub-title'>
 									Private Equity, Private Debt, Familiy Offices, Independent
@@ -79,7 +79,7 @@ export default function Home() {
 							to='advisory'
 							className='menu-list'
 						>
-							<p className='slide-up'>
+							<p className='slide-up animation-duration_1s'>
 								<span className='paragraph-title'>Advisory</span>
 								<span className='paragraph-sub-title'>
 									Corporate Entities, Portfolio Companies, Start-ups

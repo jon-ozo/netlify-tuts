@@ -93,6 +93,8 @@ h1 {
   transform: rotateX(30deg);
   font-weight: 100;
   font-family: var(--eb_garamond);
+
+  animation: slide-down 1s cubic-bezier(0, .88, .62, 1.29) forwards;
 }
 
 h2 {
@@ -216,7 +218,6 @@ select option {
 
 select option:hover {
   color: var(--mirage);
-  /* background-color: var(--mirage); */
 }
 
 button {
@@ -261,6 +262,8 @@ address h3 {
     justify-content: space-between;
     align-items: center;
     gap: var(--padd);
+
+    animation: slide-down 1s cubic-bezier(0, .88, .62, 1.29) forwards;
   }
 }
 
@@ -499,6 +502,8 @@ svg.contact-links:focus-visible {
   font-weight: 300;
   margin-block: var(--gap);
   width: min(calc(100% - var(--gap)), 50ch);
+
+  animation: slide-up 1s cubic-bezier(0, .88, .62, 1.29) forwards;
 }
 
 .home .h1-sub-text {
@@ -546,6 +551,12 @@ svg.contact-links:focus-visible {
   overflow: hidden;
 }
 
+.ordered-list {
+  animation: animate-in linear forwards animate-out linear forwards;
+  animation-timeline: view();
+  animation-range: entry, exit;
+}
+
 .ordered-list-wrapper a {
   margin-block-start: 5em;
   color: var(--mirage);
@@ -585,6 +596,7 @@ svg.contact-links:focus-visible {
 }
 
 .big-text {
+  display: inline-block;
   white-space: nowrap;
   font-family: var(--eb_garamond);
   font-size: clamp(1.3rem, 1vw + 1.8rem, 3.5rem);
@@ -612,7 +624,7 @@ svg.contact-links:focus-visible {
 .img-grid img {
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  border-radius: 2em;
+  border-radius: 1em;
 }
 
 .img-grid ul {
@@ -908,6 +920,8 @@ figcaption {
 .home-logo {
   aspect-ratio: 16 / 2;
   object-fit: contain;
+
+  animation: slide-down 1s cubic-bezier(0, .88, .62, 1.29) forwards;
 }
 
 .center-heading {
@@ -917,9 +931,9 @@ figcaption {
 }
 
 .center-sub-text {
-  width: min(calc(100% - var(--gap)), 40em);
+  width: min(calc(100% - var(--gap)), 30em);
   margin-inline: auto;
-  margin-top: 2em;
+  margin-bottom: 3em;
   text-align: center;
 }
 
@@ -1034,6 +1048,8 @@ figcaption {
   transition: var(--transition);
   perspective: 200px;
 
+  animation: slide-up 1s cubic-bezier(0, .88, .62, 1.29) forwards;
+
   @media (min-width: 60em) {
     width: fit-content;
   }
@@ -1065,6 +1081,9 @@ figcaption {
   transition: var(--transition);
   perspective: 200px;
 
+  animation: slide-up 1s cubic-bezier(0, .88, .62, 1.29) forwards;
+  animation-timeline: view();
+
   @media (min-width: 60em) {
     width: fit-content;
   }
@@ -1093,6 +1112,8 @@ figcaption {
   border: .1em solid var(--sandy_brown);
   transition: var(--transition);
   width: fit-content;
+
+  animation: slide-up 1s cubic-bezier(0, .88, .62, 1.29) forwards;
 }
 
 .sec-btn:hover,
@@ -1283,8 +1304,8 @@ figcaption {
   font-size: .8em;
 }
 
-.opacity {
-  opacity: 0;
+.animation-duration_1s {
+  animation-duration: 1s;
 }
 
 
@@ -1326,16 +1347,24 @@ figcaption {
 }
 
 .slide-down,
-.zoom-out,
 .flip-down,
 .slide-up,
 .slide-in-left,
 .slide-in-right,
 .reveal-card,
-.expand {
-  animation-duration: 1s;
+.expand,
+.zoom-out {
   animation-timing-function: cubic-bezier(0, .88, .62, 1.29);
-  animation-fill-mode: both;
+  animation-fill-mode: forwards;
+}
+
+.zoom-out {
+  animation-timing-function: linear;
+}
+
+.animation-timeline {
+  animation-timeline: view();
+  animation-range: entry 0% cover 15%;
 }
 
 
@@ -1396,6 +1425,30 @@ figcaption {
 
 
 /* keyframes */
+@keyframes animate-in {
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes animate-out {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
 @keyframes slide-down {
   from {
     transform: translateY(-2em);
@@ -1409,6 +1462,7 @@ figcaption {
 
 @keyframes slide-up {
   from {
+    opacity: 0;
     transform: translateY(2em);
   }
 
@@ -1419,11 +1473,12 @@ figcaption {
 }
 
 @keyframes zoom-out {
-  from {
-    scale: 1.5;
+  0% {
+    opacity: 0;
+    scale: 0.5;
   }
 
-  to {
+  100% {
     opacity: 1;
     scale: 1;
   }
@@ -1483,17 +1538,7 @@ figcaption {
 }
 
 @keyframes scale-line {
-  /* from {
-    scale: 0 0;
-  } */
-
   to {
     transform: scaleX(1);
   }
 }
-
-/* @keyframes scroll-img {
-  to {
-    left: -200px;
-  }
-} */

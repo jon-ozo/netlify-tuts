@@ -21,12 +21,12 @@ export default function OrderedList({
 		<article className={newParentClassName}>
 			<div className='container'>
 				<header className='container'>
-					<h2 className='slide-up'>{sectionTitle}</h2>
+					<h2 className='zoom-out animation-timeline'>{sectionTitle}</h2>
 				</header>
 				<ol className='container margin-top flex-display-column row-gap-s'>
 					{children}
 				</ol>
-				<p className='container'>
+				<p className='container zoom-out animation-timeline'>
 					<Link
 						to={link}
 						className='learn-more'

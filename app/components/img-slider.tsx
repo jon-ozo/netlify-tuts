@@ -24,13 +24,16 @@ export default function ImgSlider() {
 	return (
 		<section className='coverage container'>
 			<header className='container ecosystem-container'>
-				<h2 className='center-align-title slide-up'>
+				<h2 className='center-align-title zoom-out animation-timeline'>
 					The Ecosystem We Built Upon
 				</h2>
 			</header>
-			<ul className='slider slider-group slide-up'>
+			<ul className='slider slider-group'>
 				{arrOfBrandLogo.map((logo) => (
-					<li key={logo.alt}>
+					<li
+						className='zoom-out animation-timeline'
+						key={logo.alt}
+					>
 						<Img
 							imgSrc={logo.src}
 							altSrc={logo.alt}

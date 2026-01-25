@@ -5,8 +5,8 @@ export default function Copyright() {
 	const location = useLocation();
 	const className =
 		location.pathname === '/contact'
-			? 'container center-align-title copyright-contact-page'
-			: 'container center-align-title copyright';
+			? 'container center-align-title copyright-contact-page slide-up'
+			: 'container center-align-title copyright slide-up';
 
 	return (
 		<p className={className}>

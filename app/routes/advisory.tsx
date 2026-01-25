@@ -19,7 +19,7 @@ export default function Advisory() {
 				linkText='Connect With Us'
 				link='/contact'
 			>
-				<h1 className='flip-down'>
+				<h1>
 					Strategic & Financial <br /> Advisory for Corporates
 				</h1>
 			</HeroSection>
@@ -28,7 +28,7 @@ export default function Advisory() {
 				paragraph='At Advian Partners, we redefine corporate advisory by helping organisations translate complexity into long-term value. Our bespoke advisory process integrates strategic, financial, operational, and sustainability expertise to deliver tailored solutions aligned with each client’s ambitions, stakeholders, and operating realities.'
 				marketingLists={advisoryMarketing}
 			>
-				<h2 className='slide-up'>
+				<h2 className='zoom-out animation-timeline'>
 					A Distinctive <br />
 					Corporate Advisory Model <br />
 					for the Decisions That Matter
@@ -42,15 +42,20 @@ export default function Advisory() {
 				linkText='Learn More'
 			>
 				{advisoryLists.map((list) => (
-					<li key={list.title}>
+					<li
+						className='ordered-list zoom-out animation-timeline'
+						key={list.title}
+					>
 						<details
 							name='advisory'
 							className='details'
 						>
 							<summary>
-								<h3 className='slide-up'>{list.title}</h3>
+								<h3>{list.title}</h3>
 							</summary>
-							<p className='slide-up dropdown-content'>{list.text}</p>
+							<p className='slide-up animation-duration_1s dropdown-content'>
+								{list.text}
+							</p>
 						</details>
 					</li>
 				))}

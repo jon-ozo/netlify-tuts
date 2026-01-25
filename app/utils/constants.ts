@@ -74,7 +74,7 @@ export const advisoryLists = [
 	},
 	{
 		title: 'Structured Trade Finance',
-		text: 'We design and arrange tailored trade and working-capital solutions, including the structuring and establishment of SPVs across Europe and offshore jurisdictions. Our approach supports international operations and complex supply chains while improving liquidity, managing risk, and strengthening balance sheets without constraining strategic flexibility.',
+		text: 'We design tailored trade and working-capital solutions, including the structuring and establishment of SPVs across Europe and offshore jurisdictions. Our approach supports international operations and complex supply chains while improving liquidity, managing risk, and strengthening balance sheets without constraining strategic flexibility.',
 	},
 	{
 		title: 'Financial Restructuring',

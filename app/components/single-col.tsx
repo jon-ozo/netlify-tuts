@@ -14,13 +14,19 @@ export default function SingleCol({
 			<div className='container flex-display-column'>
 				<header>
 					{children}
-					<p className='header-sub-text slide-up'>{paragraph}</p>
+					<p className='zoom-out animation-timeline header-sub-text'>
+						{paragraph}
+					</p>
 					<ul className='grid-display marketing-stats'>
 						{marketingLists.map((list) => (
 							<li key={list.bigText}>
-								<span className='big-text'>{list.bigText}</span>
+								<span className='big-text zoom-out animation-timeline'>
+									{list.bigText}
+								</span>
 								<br />
-								<span className='small-text'>{list.smallText}</span>
+								<span className='small-text zoom-out animation-timeline'>
+									{list.smallText}
+								</span>
 							</li>
 						))}
 					</ul>
