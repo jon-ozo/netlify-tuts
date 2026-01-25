@@ -42,10 +42,7 @@ export default function Advisory() {
 				linkText='Learn More'
 			>
 				{advisoryLists.map((list) => (
-					<li
-						className='ordered-list zoom-out animation-timeline'
-						key={list.title}
-					>
+					<li key={list.title}>
 						<details
 							name='advisory'
 							className='details'

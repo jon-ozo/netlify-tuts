@@ -119,6 +119,7 @@ export default function Contact() {
 						<option value=''>What interests you?</option>
 						<option value='deal origination'>Deal Origination</option>
 						<option value='advisory'>Advisory Services</option>
+						<option value='other inquiries'>Other Inquiries</option>
 					</select>
 					<div className='select-arrow'>
 						<Svg

@@ -14,7 +14,7 @@ interface ImgProps {
 export function Img({ imgSrc, altSrc, caption, width, height }: ImgProps) {
 	return (
 		<li>
-			<figure className='zoom-out animation-timeline'>
+			<figure className='center-align-title zoom-out animation-timeline'>
 				<img
 					src={imgSrc}
 					alt={altSrc}

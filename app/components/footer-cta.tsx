@@ -8,13 +8,15 @@ export default function FooterCta() {
 		<footer className='footer'>
 			<ImgGrid />
 			<ul className='container flex-display-column row-gap-xs'>
-				<li className='animation-timeline'>
-					<h2 className='center-align-title zoom-out'>Get in Touch</h2>
+				<li className='zoom-out animation-timeline'>
+					<h2 className='center-align-title zoom-out animation-timeline'>
+						Get in Touch
+					</h2>
 				</li>
 				{/* <li className='center-sub-text slide-up'>
 					Limited Availability Per Quarter
 				</li> */}
-				<li className='center-button zoom-out animation-timeline'>
+				<li className='center-button'>
 					<Link
 						to='/contact'
 						className='sec-btn margin-top'
@@ -25,7 +27,7 @@ export default function FooterCta() {
 			</ul>
 			<div className='footer-links-wrapper container grid-display'>
 				<ul className='footer-links'>
-					<li className='footer-logo-wrapper zoom-out animation-timeline'>
+					<li className='footer-logo-wrapper'>
 						<Link to='/'>
 							<figure>
 								<img
@@ -38,36 +40,32 @@ export default function FooterCta() {
 							</figure>
 						</Link>
 					</li>
-					<li className='slide-up animation-timeline'>
-						<p className='address-title zoom-out animation-timeline'>FRANCE</p>
-						<address className='footer-address zoom-out animation-timeline'>
+					<li>
+						<p className='address-title'>FRANCE</p>
+						<address className='footer-address'>
 							60, rue François 1er,
 							<br /> 75008, Paris, <br /> France.
 						</address>
 					</li>
 				</ul>
 				<ul className='footer-links footer-page-links'>
-					<li className='footer-links-title zoom-out animation-timeline'>
-						THE FIRM
-					</li>
-					<li className=' zoom-out animation-timeline'>
+					<li className='footer-links-title'>THE FIRM</li>
+					<li>
 						<Link to='/'>HOME</Link>
 					</li>
-					<li className=' zoom-out animation-timeline'>
+					<li>
 						<Link to='/deal-origination'>DEAL ORIGINATION</Link>
 					</li>
-					<li className=' zoom-out animation-timeline'>
+					<li>
 						<Link to='/advisory'>ADVISORY</Link>
 					</li>
-					<li className=' zoom-out animation-timeline'>
+					<li>
 						<Link to='/contact'>CONTACT</Link>
 					</li>
 				</ul>
 				<ul className='footer-links'>
-					<li className='footer-links-title  zoom-out animation-timeline'>
-						CONNECT
-					</li>
-					<li className=' zoom-out animation-timeline'>
+					<li className='footer-links-title'>CONNECT</li>
+					<li>
 						<Link
 							to='https://www.linkedin.com/company/advian-partners/'
 							rel='noreferrer'
@@ -75,11 +73,11 @@ export default function FooterCta() {
 						>
 							LinkedIn
 						</Link>
-						<span className='footer-socials-span  zoom-out animation-timeline'>
+						<span className='footer-socials-span'>
 							Connect with us on LinkedIn.
 						</span>
 					</li>
-					<li className=' zoom-out animation-timeline'>
+					<li>
 						<Link
 							to='https://x.com/AdvianPartners'
 							rel='noreferrer'
@@ -87,9 +85,7 @@ export default function FooterCta() {
 						>
 							X
 						</Link>
-						<span className='footer-socials-span  zoom-out animation-timeline'>
-							Connect with us on X.
-						</span>
+						<span className='footer-socials-span'>Connect with us on X.</span>
 					</li>
 				</ul>
 			</div>

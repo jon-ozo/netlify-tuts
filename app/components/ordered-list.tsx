@@ -26,7 +26,7 @@ export default function OrderedList({
 				<ol className='container margin-top flex-display-column row-gap-s'>
 					{children}
 				</ol>
-				<p className='container zoom-out animation-timeline'>
+				<p className='container'>
 					<Link
 						to={link}
 						className='learn-more'

@@ -43,10 +43,7 @@ export default function DealOrientation() {
 				linkText='Learn More'
 			>
 				{dealOriginationLists.map((list) => (
-					<li
-						className='ordered-list zoom-out animation-timeline'
-						key={list.title}
-					>
+					<li key={list.title}>
 						<details
 							name='advisory'
 							className='details'
