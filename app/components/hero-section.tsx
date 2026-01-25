@@ -23,7 +23,7 @@ export default function HeroSection({
 				height='100%'
 				autoPlay
 				muted
-				// playsInline
+				playsInline
 				loop
 			>
 				<source
